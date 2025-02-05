@@ -5,8 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forester SH5</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Homemade+Apple&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="h-screen">
-    <h1>This is Home</h1>
+    <header class="py-8 px-10 bg-[#f8f8f7]">
+      <nav class="flex items-center justify-between">
+        <div class="logo">Forester SH5</div>
+        <div class="links">
+          <ul class="flex items-center gap-4">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+            <li>
+              <a href="#">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero bg-[#f8f8f7] flex items-center justify-center">
+        <div class="pt-24 w-full">
+          <div class="top space-y-8 w-[52%] mx-auto">
+            <h2 class="text-5xl w-[60%] mx-auto text-center">
+              The <span class="font-bold">safest way</span> to buy or sell your
+              car in Kenya
+            </h2>
+
+            <div class="cta-buttons flex justify-between">
+              <button
+                class="bg-black hover:bg-gray-600 duration-300 text-white py-5 w-80 cursor-pointer"
+              >
+                Explore Vehicles
+              </button>
+              <button
+                class="bg-[#f8f8f7] hover:bg-white duration-300 text-black border border-gray-300 py-5 w-80 cursor-pointer"
+              >
+                Buy a Bike
+              </button>
+              <button
+                class="bg-[#f8f8f7] hover:bg-white duration-300 text-black border border-gray-300 py-5 w-80 cursor-pointer"
+              >
+                Sell Your Car
+              </button>
+            </div>
+
+            <div class="scroll flex justify-center">
+              <div class="space-y-5">
+                <div class="text-6xl">Scroll down</div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 mx-auto"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom relative h-80 flex justify-center">
+            <div
+              class="text absolute -bottom-[60px] text-[200px] uppercase tracking-[30px] font-bold text-gray-200"
+            >
+              Mzee Abdalla
+            </div>
+            <img
+              class="absolute -bottom-[80px] z-10 w-[600px]"
+              src="assets/images/forester.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
