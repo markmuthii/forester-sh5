@@ -3,3 +3,20 @@
   font-weight: 400;
   font-style: normal;
 }
+
+footer {
+  text-align: center;
+  width: 100%;
+  padding: 30px;
+  position: fixed;
+  bottom: 0;
+  background-color: #f8f8f7;
+}
+
+.caveat {
+  font-family: "Caveat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 21px;
+}
