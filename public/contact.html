@@ -119,25 +119,24 @@
             </span>
           </div>
 
-          <form
-            class="w-[80%] flex flex-col gap-6"
-            action="/send-message"
-            method="POST"
-          >
+          <form class="w-[80%] flex flex-col gap-6" id="contactForm">
             <input
               class="p-2 border"
               type="text"
               placeholder="Enter your name"
+              name="fullName"
             />
             <input
               class="p-2 border"
               type="email"
               placeholder="Enter your email"
+              name="email"
             />
             <textarea
               class="p-2 border"
               placeholder="Enter your message"
               rows="7"
+              name="message"
             ></textarea>
 
             <button
