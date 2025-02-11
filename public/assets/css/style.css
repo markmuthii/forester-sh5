@@ -554,6 +554,9 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
   .mb-\[84px\] {
     margin-bottom: 84px;
   }
@@ -756,6 +759,12 @@
   }
   .text-gray-200 {
     color: var(--color-gray-200);
+  }
+  .text-green-500 {
+    color: var(--color-green-500);
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
   }
   .text-white {
     color: var(--color-white);
