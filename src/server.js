@@ -16,6 +16,9 @@ const server = http.createServer((req, res) => {
       fileName = "contact.html";
     } else if (req.url.includes("assets")) {
       fileName = req.url.slice(1); // /assets/images/forester.png
+    } else if (req.url === "/favicon.ico") {
+      res.setHeader("Content-Type", "image/x-icon");
+      fileName = "favicon.ico";
     }
 
     file = fs.readFileSync(`./public/${fileName}`);
