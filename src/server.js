@@ -2,8 +2,6 @@ import http from "http";
 import fs from "fs";
 
 const server = http.createServer((req, res) => {
-  console.log(req);
-
   if (req.method === "GET") {
     let fileName = "404.html";
     let file;
@@ -47,18 +45,40 @@ const server = http.createServer((req, res) => {
     if (req.url === "/send-message") {
       // Get the data from the request
 
-      // Send an email containing that data to the site owner's email
-
-      // If the email has been successfully sent, respond accordingly to the client
-
-      // If the email is not sent successfully, handle that case
-
-      res.setHeader("Content-Type", "application/json");
-      res.end(
-        JSON.stringify({
-          data: "Message Sent",
+      let body = [];
+      req
+        .on("data", (chunk) => {
+          body.push(chunk);
         })
-      );
+        .on("end", () => {
+          body = JSON.parse(Buffer.concat(body).toString());
+          // at this point, `body` has the entire request body stored in it as a string
+
+          // Send an email containing that data to the site owner's email
+
+          let responseObject;
+
+          // If the email has been successfully sent, respond accordingly to the client
+
+          // TODO: set up the condition to be based on whether the email has been sent or not
+          const emailSent = true;
+
+          if (emailSent) {
+            responseObject = {
+              success: true,
+              message: "Message Sent Successfully",
+            };
+          } else {
+            responseObject = {
+              success: false,
+              message: "Message Not Sent Successfully",
+            };
+          }
+          // If the email is not sent successfully, handle that case
+
+          res.setHeader("Content-Type", "application/json");
+          res.end(JSON.stringify(responseObject));
+        });
     } else {
       res.writeHead(404);
       res.end("Not found");
